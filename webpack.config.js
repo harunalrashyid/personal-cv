@@ -3,7 +3,19 @@ const path = require('path')
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+
+let pathsToClean = [
+    'dist',
+    'build'
+]
+
+let cleanOptions = {
+    root: __dirname,
+    verbose: false, // Write logs to console.
+    dry: false
+}
 
 const webpackConfig = {
 	output: {
@@ -35,7 +47,7 @@ const webpackConfig = {
 			{
 				test: /\.s[ac]ss$/i,
 				use: [
-					'style-loader',
+					MiniCssExtractPlugin.loader,
 					'css-loader',
 					'sass-loader'
 				]
@@ -67,6 +79,7 @@ const webpackConfig = {
         ]
 	},
 	plugins: [
+		new CleanWebpackPlugin(),
 		new HtmlWebPackPlugin({
 			hash: true,
 			template: './views/index.html',
