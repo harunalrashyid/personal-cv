@@ -1,0 +1,69 @@
+%contactItem {
+	@extend %d-block;
+	color: #000;
+    text-decoration: none;
+    margin-bottom: .5rem;
+}
+
+.sidebar {
+	position: sticky;
+    top: 0px;
+	padding-left: 18%;	
+}
+
+.sidebar {
+	&__title {
+		@extend %subheading;
+	}
+
+	&__item {
+	    margin-bottom: 3rem;
+	}
+
+	/*
+	 *  Contact
+	 */
+	&__contact-phone {
+		@extend %contactItem;
+	}
+
+	&__contact-email {
+		@extend %contactItem;
+	}
+
+	&__contact-website {
+		@extend %contactItem;
+	}
+
+	&__contact-location {
+		margin: 0;
+	}
+
+	/*
+	 *  Education
+	 */
+	&__education-place {
+	    margin: 0;
+	}
+
+	&__education-year {
+	    font-weight: 800;
+	    display: block;
+	}
+
+	&__education {
+	    line-height: 2;
+	    margin-bottom: 2rem;
+	}
+
+	/*
+	 *  Skills
+	 */
+	&__skills {
+	    padding-left: 1rem;
+	}
+
+	&__skills-item {
+	    margin-bottom: .65rem;
+	}
+}

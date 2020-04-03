@@ -1,0 +1,31 @@
+{
+  "name": "lima-digit-resume",
+  "version": "1.0.0",
+  "description": "Front end test at lima digit",
+  "author": "Harun",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack-dev-server --mode development --hot",
+    "build": "webpack --mode production"
+  },
+  "dependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "html-webpack-plugin": "^4.0.4",
+    "nunjucks": "^3.2.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack-mix": "^3.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "css-loader": "^3.4.2",
+    "loadash": "^1.0.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.13.1",
+    "sass-loader": "^8.0.2",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  }
+}
