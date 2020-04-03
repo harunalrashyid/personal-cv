@@ -83,7 +83,8 @@ const webpackConfig = {
 		new HtmlWebPackPlugin({
 			hash: true,
 			template: './views/index.html',
-			filename: './index.html'
+			filename: './index.html',
+			favicon: './views/favicon.ico'
 		}),
 		new MiniCssExtractPlugin({
             filename: "assets/css/[name].[hash:8].css"
