@@ -1,5 +1,5 @@
-# lima-digit-resume
-Front End Developer Test at Lima Digit
+# Personal CV
+Personal cv demo template
 
 # Running on local
 1. yarn install
